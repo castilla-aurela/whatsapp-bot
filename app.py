@@ -5,14 +5,8 @@ app = Flask(__name__)
 
 # Fake database
 USERS = {
-    "12345": {
-        "debt": 200.0,
-        "invoice_url": "https://github.com/castilla-aurela/whatsapp-pdfs/raw/main/factura13062024.pdf"
-    },
-    "67890": {
-        "debt": 0.0,
-        "certificate_url": "https://github.com/castilla-aurela/whatsapp-pdfs/raw/main/factura30-09-2024..pdf"
-    },
+    "12345": {"debt": 200.0, "invoice": "Invoice_12345.pdf"},
+    "67890": {"debt": 0.0, "certificate": "Clearance_67890.pdf"},
 }
 
 @app.route("/webhook", methods=["POST"])
